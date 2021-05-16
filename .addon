@@ -1,0 +1,19 @@
+{
+		"name": "poker",
+		"sharedassets": "*.*",
+		
+		"depends": 
+		[
+			"base",
+			"citizen",
+			"rust"
+		],
+
+		"gamemodes":
+		[
+			{
+				"name": "poker",
+				"title": "poker"
+			}
+		]
+}
