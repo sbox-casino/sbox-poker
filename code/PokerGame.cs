@@ -1,4 +1,6 @@
-﻿using Sandbox;
+﻿using System;
+using System.Linq;
+using Sandbox;
 
 namespace Poker
 {
@@ -10,7 +12,7 @@ namespace Poker
 			if ( IsServer )
 			{
 				Log.Info( "My Gamemode Has Created Serverside!" );
-				new MinimalHudEntity();
+				new PokerHudEntity();
 			}
 
 			if ( IsClient )
@@ -23,10 +25,30 @@ namespace Poker
 		{
 			base.ClientJoined( client );
 
-			var player = new MinimalPlayer();
+			var player = new PokerPlayer();
 			client.Pawn = player;
 
 			player.Respawn();
+		}
+		
+		
+		public override void MoveToSpawnpoint( Entity pawn )
+		{
+			if ( !IsServer )
+				return;
+			
+			var playerCount = Entity.All.OfType<Player>().Count();
+
+			var spawnPoints = Entity.All
+				.OfType<SpawnPoint>().ToArray();
+			var spawnpoint = spawnPoints[playerCount];
+
+			if ( spawnpoint == null )
+			{
+				Log.Warning( "Couldn't find spawnpoint!" );
+			}
+
+			pawn.Transform = spawnpoint.Transform;
 		}
 	}
 

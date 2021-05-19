@@ -1,0 +1,29 @@
+
+.root {
+}
+
+text.title
+{
+	font-family: Nunito;
+	font-size: 50px;
+	font-weight: 700;
+	color: white;
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+	border-radius: 100px 0 0 100px;
+	padding: 25px;
+	width: 300px;
+	text-shadow: 5px 5px 50px rgba( black, 0.8 );
+	background: linear-gradient( 25%, rgba( black, 0.8 ), rgba( black, 0.0 ) );
+}
+
+.cursor-hack {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+	pointer-events: visible;
+}
