@@ -1,5 +1,7 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using Poker.Entities;
+using Poker.Game;
 using Sandbox;
 
 namespace Poker
@@ -11,13 +13,9 @@ namespace Poker
 		{
 			if ( IsServer )
 			{
-				Log.Info( "My Gamemode Has Created Serverside!" );
 				new PokerHudEntity();
-			}
 
-			if ( IsClient )
-			{
-				Log.Info( "My Gamemode Has Created Clientside!" );
+				CardTest();
 			}
 		}
 		
@@ -30,7 +28,6 @@ namespace Poker
 
 			player.Respawn();
 		}
-		
 		
 		public override void MoveToSpawnpoint( Entity pawn )
 		{
@@ -49,6 +46,31 @@ namespace Poker
 			}
 
 			pawn.Transform = spawnpoint.Transform;
+		}
+
+		[ServerCmd( "create_game" )]
+		public static void CreateGame()
+		{
+			new PokerGameMachine().Run();
+		}
+
+		public void CardTest()
+		{
+			// Spawn every card as a test
+
+			for ( Suit suit = Suit.Diamonds; suit <= Suit.Clubs; ++suit )
+			{
+				for ( Value value = Value.Two; value <= Value.King; ++value )
+				{
+					var card = new CardEntity();
+					card.Position = (Vector3.Right * (int)value * 10) + (Vector3.Backward * (int)suit * 10) +
+					                (Vector3.Up * 100);
+					card.Rotation = Rotation.LookAt( Vector3.Up );
+
+					card.Card = new Card( suit, value );
+					card.Dirty();
+				}	
+			}
 		}
 	}
 

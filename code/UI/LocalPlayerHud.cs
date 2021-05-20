@@ -5,7 +5,7 @@ namespace Poker.UI
 {
 	public class LocalPlayerHud : Panel
 	{
-		public string PlayerMoney => $"$ {(Local.Pawn as PokerPlayer).Money}";
+		public string PlayerMoney => $"$ {(Local.Pawn as PokerPlayer)?.Money ?? 0}";
 
 		public LocalPlayerHud()
 		{
