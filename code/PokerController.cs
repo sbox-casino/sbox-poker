@@ -13,16 +13,17 @@ namespace Poker
 		
 		public override void FrameSimulate()
 		{
-			base.FrameSimulate();
+			EyeRot = Rotation.From( 30, 270, 0 );
+			// base.FrameSimulate();
 
-			EyeRot = Input.Rotation;
+			// EyeRot = Input.Rotation;
 		}
 
 		public override void Simulate()
 		{
 			EyePosLocal = Vector3.Up * (EyeHeight * Pawn.Scale);
 			EyePosLocal += TraceOffset;
-			EyeRot = Input.Rotation;
+			// EyeRot = Input.Rotation;
 		}
 	}
 }

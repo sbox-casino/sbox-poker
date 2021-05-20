@@ -11,12 +11,15 @@ namespace Poker
 		 * They should be locked to chairs, and only visible to other clients
 		 * We need first person controls and a free mouse (no FPS-style mouselook)
 		 */
+
+		[Net] public decimal Money { get; set; } = 1000.00M; // haha s&bux
+		
 		public override void Respawn()
 		{
 			SetModel( "models/citizen/citizen.vmdl" );
 
 			Controller = new PokerController(); // No movement
-			Animator = new StandardPlayerAnimator();
+			Animator = new PokerAnimator();
 			Camera = new FirstPersonCamera();
 
 			EnableAllCollisions = true;
