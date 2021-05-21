@@ -5,7 +5,7 @@ using Sandbox;
 namespace Poker.Entities
 {
 	[Library( "ent_playing_card" )]
-	public partial class CardEntity : ModelEntity
+	public partial class CardEntity : MovableEntity
 	{
 		/// <summary>
 		/// The game-side representation of this card
@@ -16,7 +16,7 @@ namespace Poker.Entities
 		{
 			base.Spawn();
 			SetModel( "Models/card.vmdl" );
-			SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
+			SetupPhysicsFromModel( PhysicsMotionType.Dynamic ); 
 		}
 
 		public void Dirty()

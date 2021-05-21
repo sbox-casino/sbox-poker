@@ -14,8 +14,16 @@
 						remaps = 
 						[
 							{
-								from = "lambert3.vmat"
-								to = "materials/pokertableround.vmat"
+								from = "fabric.vmat"
+								to = "materials/fabric.vmat"
+							},
+							{
+								from = "wood.vmat"
+								to = "materials/wood.vmat"
+							},
+							{
+								from = "screws.vmat"
+								to = "materials/screws.vmat"
 							},
 						]
 						use_global_default = false
@@ -36,9 +44,9 @@
 						recenter_on_parent_bone = false
 						offset_origin = [ 0.0, 0.0, 0.0 ]
 						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "Models/PokerTableRound.fbx"
+						filename = "models/pokertableround_col.fbx"
 						import_scale = 0.075
-						maxMeshVertices = 450
+						maxMeshVertices = 0
 						qemError = 0.0
 						import_filter = 
 						{

@@ -1,0 +1,51 @@
+﻿.age-warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  background-color: #6B221A;
+  
+  pointer-events: all;
+  
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  opacity: 1;
+  transition: all 250ms ease-out;
+  transform: scale(1);
+  
+  &.exit {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+}
+
+.title {
+  font-size: 50px;
+  margin: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #F74E3B;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px #00000088;
+  margin: 5px;
+  
+  &:hover {
+    background-color: white;
+    color: #F74E3B;
+  }
+}
+
+span {
+  margin: 20px;
+}

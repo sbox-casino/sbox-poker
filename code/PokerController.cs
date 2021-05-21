@@ -14,7 +14,7 @@ namespace Poker
 		
 		public override void FrameSimulate()
 		{
-			EyeRot = Rotation.From( 30, 270, 0 );
+			EyeRot = Rotation.From( 40, 270, 0 );
 		}
 
 		public override void Simulate()
