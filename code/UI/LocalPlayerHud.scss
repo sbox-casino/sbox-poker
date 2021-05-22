@@ -1,0 +1,15 @@
+.money-text
+{
+	font-family: Nunito;
+	font-size: 50px;
+	font-weight: 700;
+	color: white;
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+	border-radius: 100px 0 0 100px;
+	padding: 25px;
+	width: 300px;
+	text-shadow: 0 0 25px rgba( black, 0.8 );
+	background: linear-gradient( 25%, rgba( black, 0.8 ), rgba( black, 0.0 ) );
+}

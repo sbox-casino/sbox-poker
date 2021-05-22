@@ -34,7 +34,7 @@ namespace CreateCardMaterials
             
             #line default
             #line hidden
-            this.Write("\"\r\n\r\n\t//---- Fade ----\r\n\tg_flFadeExponent \"1.000\"\r\n\r\n\t//---- Fog ----\r\n\tg_bFogEnabled \"1\"\r\n\r\n\t//---- Lighting ----\r\n\tg_flDirectionalLightmapMinZ \"0.050\"\r\n\tg_flDirectionalLightmapStrength \"1.000\"\r\n\r\n\t//---- Metalness ----\r\n\tg_flMetalness \"0.000\"\r\n\r\n\t//---- Normal ----\r\n\tTextureNormal \"materials/default/default_normal.tga\"\r\n\r\n\t//---- Roughness ----\r\n\tTextureRoughness \"[1.000000 1.000000 1.000000 0.000000]\"\r\n\r\n\t//---- Texture Coordinates ----\r\n\tg_nScaleTexCoordUByModelScaleAxis \"0\"\r\n\tg_nScaleTexCoordVByModelScaleAxis \"0\"\r\n\tg_vTexCoordOffset \"[0.000 0.000]\"\r\n\tg_vTexCoordScale \"[1.000 1.000]\"\r\n\tg_vTexCoordScrollSpeed \"[0.000 0.000]\"\r\n}");
+            this.Write("\"\r\n\r\n\t//---- Fade ----\r\n\tg_flFadeExponent \"1.000\"\r\n\r\n\t//---- Fog ----\r\n\tg_bFogEnabled \"1\"\r\n\r\n\t//---- Lighting ----\r\n\tg_flDirectionalLightmapMinZ \"0.050\"\r\n\tg_flDirectionalLightmapStrength \"1.000\"\r\n\r\n\t//---- Metalness ----\r\n\tg_flMetalness \"0.000\"\r\n\r\n\t//---- Normal ----\r\n\tTextureNormal \"materials/default/default_normal.tga\"\r\n\r\n\t//---- Roughness ----\r\n\tTextureRoughness \"[0.500000 0.500000 0.500000 0.000000]\"\r\n\r\n\t//---- Texture Coordinates ----\r\n\tg_nScaleTexCoordUByModelScaleAxis \"0\"\r\n\tg_nScaleTexCoordVByModelScaleAxis \"0\"\r\n\tg_vTexCoordOffset \"[0.000 0.000]\"\r\n\tg_vTexCoordScale \"[1.000 1.000]\"\r\n\tg_vTexCoordScrollSpeed \"[0.000 0.000]\"\r\n}");
             return this.GenerationEnvironment.ToString();
         }
     }

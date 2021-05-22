@@ -25,6 +25,21 @@
 						use_global_default = false
 						global_default_material = ""
 					},
+					{
+						_class = "MaterialGroup"
+						name = "Gold"
+						remaps = 
+						[
+							{
+								from = "materials/chip.vmat"
+								to = "materials/chip_gold.vmat"
+							},
+							{
+								from = "materials/chip_side.vmat"
+								to = "materials/chip_gold_side.vmat"
+							},
+						]
+					},
 				]
 			},
 			{
@@ -33,6 +48,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						name = "ChipLQ"
 						filename = "Models/Chip.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
@@ -44,7 +60,35 @@
 						import_filter = 
 						{
 							exclude_by_default = false
-							exception_list = [  ]
+							exception_list = 
+							[
+								"Cylinder_001",
+								"Cylinder",
+								"Cylinder_005",
+								"Cylinder_004",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "ChipHQ"
+						filename = "models/chip.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 0.5
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Cylinder_003",
+								"Cylinder_006",
+								"Cylinder_004",
+							]
 						}
 					},
 				]
@@ -54,16 +98,6 @@
 				children = 
 				[
 					{
-						_class = "PhysicsShapeBox"
-						disabled = true
-						parent_bone = ""
-						surface_prop = "chip"
-						collision_prop = "default"
-						origin = [ 0.001136, 0.014571, 0.001808 ]
-						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 1.955036, 1.926828, 0.147444 ]
-					},
-					{
 						_class = "PhysicsHullFile"
 						name = "Chip"
 						parent_bone = ""
@@ -72,17 +106,39 @@
 						recenter_on_parent_bone = false
 						offset_origin = [ 0.0, 0.0, 0.0 ]
 						offset_angles = [ 0.0, 0.0, 0.0 ]
-						filename = "Models/Chip.fbx"
+						filename = "models/chip_col.fbx"
 						import_scale = 0.5
-						faceMergeAngle = 5.0
+						faceMergeAngle = 8.0
 						maxHullVertices = 16
-						import_mode = "HullPerElement"
+						import_mode = "SingleHull"
 						optimization_algorithm = "IFR"
 						import_filter = 
 						{
 							exclude_by_default = false
 							exception_list = [  ]
 						}
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"ChipHQ",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.5
+						meshes = 
+						[
+							"ChipLQ",
+						]
 					},
 				]
 			},

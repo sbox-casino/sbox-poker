@@ -36,35 +36,33 @@ namespace CreateCardMaterials
 	    public static string GetTextureName( Suit suit, Value value )
 	    {
 		    // Texture name format:
-		    // card_(suit)_(numeric value or J/Q/K)
+		    // card(Suit)(numeric value or J/Q/K)
 
 		    string ConvertValue( Value value )
 		    {
 			    if ( value < Value.Ace )
 			    {
-				    return ((int)value + 2).ToString("D2");
+				    return ((int)value + 2).ToString();
 			    }
 			    // First char of value as uppercase
 			    return value.ToString()[0].ToString().ToUpper();
 		    }
 
-		    return $"{suit}_{ConvertValue( value )}";
+		    return $"{suit}{ConvertValue( value )}";
 	    }
 
 
 	    public static string GetTexturePath(Suit suit, Value value)
 	    {
 	        const string baseDirectory = "/Textures/Cards";
-			return Path.Combine( baseDirectory, "card_" + GetTextureName(suit, value) + ".png" );
+			return Path.Combine( baseDirectory, "card" + GetTextureName(suit, value) + ".png" );
 	    }
 
 	    private static string baseDir = @"E:\Games\SteamLibrary\steamapps\common\sbox\addons\poker";
 	    
         static void Main( string[] args )
         {
-            Console.WriteLine( "Hello World!" );
-
-            for ( int suitIndex = 0; suitIndex <= (int)Suit.Clubs; ++suitIndex )
+	        for ( int suitIndex = 0; suitIndex <= (int)Suit.Clubs; ++suitIndex )
             {
 	            for ( int valueIndex = 0; valueIndex <= (int)Value.King; ++valueIndex )
 	            {

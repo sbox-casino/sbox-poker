@@ -12,10 +12,7 @@ namespace Poker
 		
 		public PokerController() { }
 		
-		public override void FrameSimulate()
-		{
-			EyeRot = Rotation.From( 40, 270, 0 );
-		}
+		public override void FrameSimulate() { }
 
 		public override void Simulate()
 		{

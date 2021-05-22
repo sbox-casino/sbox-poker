@@ -1,0 +1,61 @@
+﻿.player-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  background: linear-gradient( 50%, #00000000, #000000cc );
+
+  opacity: 1;
+  transition: all 250ms ease-out;
+  transform: scale(1);
+}
+
+.player-info-card {
+  position: relative;
+  
+  width: 200px;
+  margin: 25px;
+  height: 150px;
+  
+  flex-direction: column;  
+  border-radius: 32px;
+
+  text-shadow: 0 0 15px #00000088;
+  
+  .player-cash, .player-name, .player-status {
+    padding: 7.5px 10px 5px 10px; // HACK: Make text look more vertically centered
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;    
+  }
+  
+  &.folded {
+    .player-cash, .player-status {
+      opacity: 0.5;
+    }
+  }
+  
+  .player-status {
+    border-radius: 32px;
+    &.raise {
+      background-color: #07B85B;      
+    }
+    &.folded {
+      background-color: #6B221A;      
+    }
+    &.blind {
+      background-color: #B84B3E;
+    }
+  }
+}

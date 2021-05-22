@@ -9,7 +9,8 @@ namespace Poker.UI
 
 		public LocalPlayerHud()
 		{
-			SetTemplate( "/PokerHud.html" );
+			SetTemplate( "/UI/LocalPlayerHud.html" );
 		}
 	}
 }
+

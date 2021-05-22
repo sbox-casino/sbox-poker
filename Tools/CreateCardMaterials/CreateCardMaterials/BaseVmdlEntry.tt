@@ -9,7 +9,7 @@
 	[
 		{
 			from = "materials/card_back.vmat"
-			to = "materials/card_<#= CardMaterial #>.vmat"
+			to = "materials/card<#= CardMaterial #>.vmat"
 		},
 	]
 },

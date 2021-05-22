@@ -28,573 +28,573 @@
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_02"
+						name = "Diamonds2"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_02.vmat"
+								to = "materials/carddiamonds2.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_03"
+						name = "Diamonds3"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_03.vmat"
+								to = "materials/carddiamonds3.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_04"
+						name = "Diamonds4"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_04.vmat"
+								to = "materials/carddiamonds4.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_05"
+						name = "Diamonds5"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_05.vmat"
+								to = "materials/carddiamonds5.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_06"
+						name = "Diamonds6"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_06.vmat"
+								to = "materials/carddiamonds6.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_07"
+						name = "Diamonds7"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_07.vmat"
+								to = "materials/carddiamonds7.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_08"
+						name = "Diamonds8"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_08.vmat"
+								to = "materials/carddiamonds8.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_09"
+						name = "Diamonds9"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_09.vmat"
+								to = "materials/carddiamonds9.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_10"
+						name = "Diamonds10"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_10.vmat"
+								to = "materials/carddiamonds10.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_A"
+						name = "DiamondsA"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_a.vmat"
+								to = "materials/carddiamondsa.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_J"
+						name = "DiamondsJ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_j.vmat"
+								to = "materials/carddiamondsj.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_Q"
+						name = "DiamondsQ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_q.vmat"
+								to = "materials/carddiamondsq.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Diamonds_K"
+						name = "DiamondsK"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_diamonds_k.vmat"
+								to = "materials/carddiamondsk.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_02"
+						name = "Hearts2"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_02.vmat"
+								to = "materials/cardhearts2.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_03"
+						name = "Hearts3"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_03.vmat"
+								to = "materials/cardhearts3.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_04"
+						name = "Hearts4"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_04.vmat"
+								to = "materials/cardhearts4.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_05"
+						name = "Hearts5"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_05.vmat"
+								to = "materials/cardhearts5.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_06"
+						name = "Hearts6"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_06.vmat"
+								to = "materials/cardhearts6.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_07"
+						name = "Hearts7"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_07.vmat"
+								to = "materials/cardhearts7.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_08"
+						name = "Hearts8"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_08.vmat"
+								to = "materials/cardhearts8.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_09"
+						name = "Hearts9"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_09.vmat"
+								to = "materials/cardhearts9.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_10"
+						name = "Hearts10"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_10.vmat"
+								to = "materials/cardhearts10.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_A"
+						name = "HeartsA"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_a.vmat"
+								to = "materials/cardheartsa.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_J"
+						name = "HeartsJ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_j.vmat"
+								to = "materials/cardheartsj.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_Q"
+						name = "HeartsQ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_q.vmat"
+								to = "materials/cardheartsq.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Hearts_K"
+						name = "HeartsK"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_hearts_k.vmat"
+								to = "materials/cardheartsk.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_02"
+						name = "Spades2"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_02.vmat"
+								to = "materials/cardspades2.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_03"
+						name = "Spades3"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_03.vmat"
+								to = "materials/cardspades3.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_04"
+						name = "Spades4"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_04.vmat"
+								to = "materials/cardspades4.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_05"
+						name = "Spades5"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_05.vmat"
+								to = "materials/cardspades5.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_06"
+						name = "Spades6"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_06.vmat"
+								to = "materials/cardspades6.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_07"
+						name = "Spades7"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_07.vmat"
+								to = "materials/cardspades7.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_08"
+						name = "Spades8"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_08.vmat"
+								to = "materials/cardspades8.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_09"
+						name = "Spades9"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_09.vmat"
+								to = "materials/cardspades9.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_10"
+						name = "Spades10"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_10.vmat"
+								to = "materials/cardspades10.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_A"
+						name = "SpadesA"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_a.vmat"
+								to = "materials/cardspadesa.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_J"
+						name = "SpadesJ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_j.vmat"
+								to = "materials/cardspadesj.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_Q"
+						name = "SpadesQ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_q.vmat"
+								to = "materials/cardspadesq.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Spades_K"
+						name = "SpadesK"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_spades_k.vmat"
+								to = "materials/cardspadesk.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_02"
+						name = "Clubs2"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_02.vmat"
+								to = "materials/cardclubs2.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_03"
+						name = "Clubs3"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_03.vmat"
+								to = "materials/cardclubs3.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_04"
+						name = "Clubs4"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_04.vmat"
+								to = "materials/cardclubs4.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_05"
+						name = "Clubs5"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_05.vmat"
+								to = "materials/cardclubs5.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_06"
+						name = "Clubs6"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_06.vmat"
+								to = "materials/cardclubs6.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_07"
+						name = "Clubs7"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_07.vmat"
+								to = "materials/cardclubs7.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_08"
+						name = "Clubs8"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_08.vmat"
+								to = "materials/cardclubs8.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_09"
+						name = "Clubs9"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_09.vmat"
+								to = "materials/cardclubs9.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_10"
+						name = "Clubs10"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_10.vmat"
+								to = "materials/cardclubs10.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_A"
+						name = "ClubsA"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_a.vmat"
+								to = "materials/cardclubsa.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_J"
+						name = "ClubsJ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_j.vmat"
+								to = "materials/cardclubsj.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_Q"
+						name = "ClubsQ"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_q.vmat"
+								to = "materials/cardclubsq.vmat"
 							},
 						]
 					},
 					{
 						_class = "MaterialGroup"
-						name = "Clubs_K"
+						name = "ClubsK"
 						remaps = 
 						[
 							{
 								from = "materials/card_back.vmat"
-								to = "materials/card_clubs_k.vmat"
+								to = "materials/cardclubsk.vmat"
 							},
 						]
 					},

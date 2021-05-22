@@ -9,14 +9,22 @@ namespace Poker
 	[Library( "poker" )]
 	public partial class PokerGame : Sandbox.Game
 	{
+		public PokerHudEntity PokerHudEntity { get; set; }
 		public PokerGame()
 		{
 			if ( IsServer )
 			{
-				new PokerHudEntity();
+				PokerHudEntity = new PokerHudEntity();
 
 				CardTest();
 			}
+		}
+
+		[ServerCmd( "recreatehud" )]
+		public static void RecreateHud()
+		{
+			(PokerGame.Current as PokerGame).PokerHudEntity.Delete();
+			(PokerGame.Current as PokerGame).PokerHudEntity = new();
 		}
 		
 		public override void ClientJoined( Client client )
@@ -46,6 +54,8 @@ namespace Poker
 			}
 
 			pawn.Transform = spawnpoint.Transform;
+			pawn.EyeRot = spawnpoint.Rotation;
+			pawn.EyeRot = Rotation.From( pawn.EyeRot.Angles().WithPitch( 40 ) );
 		}
 
 		[ServerCmd( "create_game" )]

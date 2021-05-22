@@ -34,7 +34,7 @@ namespace CreateCardMaterials
             
             #line default
             #line hidden
-            this.Write("\"\r\n\tremaps = \r\n\t[\r\n\t\t{\r\n\t\t\tfrom = \"materials/card_back.vmat\"\r\n\t\t\tto = \"materials/card_");
+            this.Write("\"\r\n\tremaps = \r\n\t[\r\n\t\t{\r\n\t\t\tfrom = \"materials/card_back.vmat\"\r\n\t\t\tto = \"materials/card");
             
             #line 12 "E:\Games\SteamLibrary\steamapps\common\sbox\addons\poker\Tools\CreateCardMaterials\CreateCardMaterials\BaseVmdlEntry.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(CardMaterial));
