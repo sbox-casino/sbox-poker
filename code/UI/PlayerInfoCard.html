@@ -1,6 +1,6 @@
-﻿<div class="player-info-card">
-    <image @src="AvatarImage" class="player-avatar"></image>
+﻿<div class="player-info-card" @class="Status">
+    <image @texture="AvatarImage" class="player-avatar"></image>
     <text @text="PlayerName" class="player-name">Bob</text>
     <text @text="PlayerCash" class="player-cash">$1000</text>
-    <text @text="PlayerStatus" class="player-status raise">Raised $1,400</text>
+    <text @text="PlayerStatus" class="player-status" @class="Status">Raised $1,400</text>
 </div>

@@ -14,12 +14,20 @@
 						remaps = 
 						[
 							{
-								from = "chip.vmat"
-								to = "materials/chip.vmat"
+								from = "bakedchip.vmat"
+								to = "materials/chipv2/chipv2.vmat"
 							},
 							{
-								from = "chipside.vmat"
-								to = "materials/chip_side.vmat"
+								from = ""
+								to = "materials/chipv2/plastic.vmat"
+							},
+							{
+								from = "chipnumber.vmat"
+								to = "materials/chipv2/plastic.vmat"
+							},
+							{
+								from = "chipuncolored.vmat"
+								to = "materials/chipv2/plastic.vmat"
 							},
 						]
 						use_global_default = false
@@ -48,11 +56,11 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						name = "ChipLQ"
+						name = "LOD0"
 						filename = "Models/Chip.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 0.5
+						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
@@ -62,20 +70,21 @@
 							exclude_by_default = false
 							exception_list = 
 							[
-								"Cylinder_001",
 								"Cylinder",
 								"Cylinder_005",
 								"Cylinder_004",
+								"Cylinder_001",
+								"Cylinder_002",
 							]
 						}
 					},
 					{
 						_class = "RenderMeshFile"
-						name = "ChipHQ"
-						filename = "models/chip.fbx"
+						name = "LOD1"
+						filename = "Models/Chip.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 0.5
+						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
@@ -85,9 +94,35 @@
 							exclude_by_default = false
 							exception_list = 
 							[
-								"Cylinder_003",
-								"Cylinder_006",
+								"Cylinder",
+								"Cylinder_005",
 								"Cylinder_004",
+								"Cylinder_002",
+								"Cylinder_006",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD3"
+						filename = "Models/Chip.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Cylinder",
+								"Cylinder_005",
+								"Cylinder_006",
+								"Cylinder_002",
+								"Cylinder_001",
 							]
 						}
 					},
@@ -115,7 +150,11 @@
 						import_filter = 
 						{
 							exclude_by_default = false
-							exception_list = [  ]
+							exception_list = 
+							[
+								"Cylinder_003",
+								"Cylinder",
+							]
 						}
 					},
 				]
@@ -129,7 +168,7 @@
 						switch_threshold = 0.0
 						meshes = 
 						[
-							"ChipHQ",
+							"LOD0",
 						]
 					},
 					{
@@ -137,8 +176,31 @@
 						switch_threshold = 0.5
 						meshes = 
 						[
-							"ChipLQ",
+							"LOD1",
 						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 3.3
+						meshes = 
+						[
+							"LOD3",
+						]
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.05
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
 					},
 				]
 			},

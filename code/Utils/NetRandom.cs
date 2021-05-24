@@ -8,8 +8,8 @@ namespace Poker.Utils
 	/// </summary>
 	internal partial class NetRandom : NetworkClass
 	{
-		[NetLocalPredicted] private int RandomSeed { get; set; }
-		[NetLocalPredicted] private int RandomCount { get; set; }
+		[Net, Local, Predicted] private int RandomSeed { get; set; }
+		[Net, Local, Predicted] private int RandomCount { get; set; }
 
 		private float InternalRandomFloat(Random random, float min = -1f, float max = 1f)
 		{

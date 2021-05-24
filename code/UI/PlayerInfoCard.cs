@@ -1,18 +1,60 @@
-﻿using Sandbox;
+﻿using Poker;
+using Sandbox;
 using Sandbox.UI;
 
 namespace poker.UI
 {
 	public class PlayerInfoCard : Panel
 	{
-		private string AvatarImage { get; set; }
-		private string PlayerName { get; set; }
-		private string PlayerCash { get; set; }
-		private string PlayerStatus { get; set; }
-
-		public PlayerInfoCard( Client client )
+		public enum InfoStatus
 		{
-			SetTemplate( "PlayerInfoCard.html" );
+			None,
+			Raise,
+			Blind,
+			Folded
+		}
+		
+		public string AvatarImage { get; set; }
+		public string PlayerName { get; set; }
+		public string PlayerCash { get; set; }
+		public string PlayerStatus { get; set; }
+		public InfoStatus Status { get; set; } = InfoStatus.None;
+
+		public Client Client { get; private set; }
+		public PokerPlayer Player { get; private set; }
+		
+		public PlayerInfoCard()
+		{
+			SetTemplate( "UI/PlayerInfoCard.html" );
+		}
+
+		public void SetInfo( Client client, PokerPlayer player )
+		{
+			Client = client;
+			Player = player;
+			
+			InternalSetInfo();
+		}
+
+		private void InternalSetInfo()
+		{
+			AvatarImage = $"avatar:{Client.SteamId}";
+			PlayerName = Client.Name;
+			PlayerCash = $"${Player.Money}";
+			Status = InfoStatus.None;
+			// PlayerStatus = Status.ToString();
+		}
+
+		public void Update()
+		{
+			if ( !Client.IsValid() )
+			{
+				Delete();
+				return;
+			}
+			
+			PlayerCash = $"${Player.Money}";
+			Status = InfoStatus.None;
 		}
 	}
 }

@@ -15,7 +15,7 @@
 				"name": "poker",
 				"title": "Poker",
 				"description": "Authentic Texas hold 'em",
-				"icon": "https://files.facepunch.com/sbox/org/alex/poker/thumb.b5c5b6f6.jpg"
+				"icon": "Textures/UI/Thumb.png"
 			}
 		]
 }

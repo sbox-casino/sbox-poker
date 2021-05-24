@@ -11,8 +11,7 @@
   
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  
+  justify-content: space-between;
   background: linear-gradient( 50%, #00000000, #000000cc );
 
   opacity: 1;
@@ -48,6 +47,7 @@
   
   .player-status {
     border-radius: 32px;
+    box-shadow: 0 0 10px #00000088;
     &.raise {
       background-color: #07B85B;      
     }
@@ -56,6 +56,9 @@
     }
     &.blind {
       background-color: #B84B3E;
+    }
+    &.none {
+      opacity: 0;
     }
   }
 }

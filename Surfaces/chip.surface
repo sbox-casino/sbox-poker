@@ -3,11 +3,11 @@
 	data = 
 	{
 		Base = "plastic"
-		Friction = 0.4
+		Friction = 0.2
 		Elasticity = 0.0
-		Density = 2000.0
-		Thickness = -1.0
-		Dampening = 0.0
+		Density = 4000.0
+		Thickness = 100.0
+		Dampening = 100.0
 		ImpactEffects = 
 		{
 			Regular = [  ]

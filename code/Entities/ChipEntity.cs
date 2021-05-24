@@ -14,6 +14,7 @@ namespace Poker.Entities
 			SetModel( "Models/chip.vmdl" );
 			SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
 
+	
 			PhysicsBody.EnableAutoSleeping = true;
 
 			SetValue( (ChipValue) Rand.Int( (int)ChipValue.One, (int)ChipValue.FiveThousand ) );

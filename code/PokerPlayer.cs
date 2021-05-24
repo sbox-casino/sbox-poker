@@ -67,6 +67,8 @@ namespace Poker
 		{
 			base.Simulate( cl );
 
+			
+
 			UpdateAimDir( cl.Pawn as Player, Input );
 			AimTrace = Trace.Ray( EyePos, EyePos + (AimDir * 120) )
 				//.Ignore( cl.Pawn )
@@ -75,6 +77,8 @@ namespace Poker
 				.Run();
 			
 			RunPickupSystem( cl );
+			
+			
 			
 			if ( IsClient )
 			{	

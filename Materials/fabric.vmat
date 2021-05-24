@@ -30,7 +30,7 @@ Layer0
 
 	//---- Parallax ----
 	g_flHeightMapScale "0.010"
-	g_nLODThreshold "2"
+	g_nLODThreshold "4"
 	g_nMaxSamples "128"
 	g_nMinSamples "8"
 	TextureHeight "E:/Games/SteamLibrary/steamapps/common/sbox/addons/poker/Textures/PokerTableRound/Fabric019_4K_Displacement.jpg"
@@ -42,6 +42,6 @@ Layer0
 	g_nScaleTexCoordUByModelScaleAxis "0"
 	g_nScaleTexCoordVByModelScaleAxis "0"
 	g_vTexCoordOffset "[0.000 0.000]"
-	g_vTexCoordScale "[4.000 4.000]"
+	g_vTexCoordScale "[8.000 8.000]"
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
 }
