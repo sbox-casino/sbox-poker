@@ -12,10 +12,10 @@ namespace Poker
 			var pawn = Local.Pawn;
 			if ( pawn == null ) return;
 
-			Pos = pawn.EyePos;
-			Rot = pawn.EyeRot;
+			Position = pawn.EyePos;
+			Rotation = pawn.EyeRot;
 
-			lastPos = Pos;
+			lastPos = Position;
 		}
 
 		public override void Update()
@@ -25,13 +25,13 @@ namespace Poker
 
 			var eyePos = pawn.EyePos;
 
-			Pos = Vector3.Lerp( eyePos.WithZ( lastPos.z ), eyePos, 20.0f * Time.Delta );
-			Rot = pawn.EyeRot;
+			Position = Vector3.Lerp( eyePos.WithZ( lastPos.z ), eyePos, 20.0f * Time.Delta );
+			Rotation = pawn.EyeRot;
 
-			FieldOfView = 70;
+			FieldOfView = 80;
 
 			Viewer = pawn;
-			lastPos = Pos;
+			lastPos = Position;
 		}
 	}
 }

@@ -16,7 +16,7 @@ namespace Poker.Entities
 		{
 			base.Spawn();
 			SetModel( "Models/card.vmdl" );
-			SetupPhysicsFromModel( PhysicsMotionType.Dynamic ); 
+			SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
 		}
 
 		public void Dirty()

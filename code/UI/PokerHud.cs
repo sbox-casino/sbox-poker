@@ -28,6 +28,7 @@ namespace Poker
 			RootPanel.AddChild<ChatBox>();
 			RootPanel.AddChild<MouseControl>();
 			RootPanel.AddChild<PlayerInfo>();
+			RootPanel.AddChild<Scoreboard<PokerEntry>>();
 		}
 	}
 }

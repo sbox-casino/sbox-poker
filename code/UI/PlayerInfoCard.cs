@@ -2,7 +2,7 @@
 using Sandbox;
 using Sandbox.UI;
 
-namespace poker.UI
+namespace Poker.UI
 {
 	public class PlayerInfoCard : Panel
 	{
@@ -13,7 +13,7 @@ namespace poker.UI
 			Blind,
 			Folded
 		}
-		
+
 		public string AvatarImage { get; set; }
 		public string PlayerName { get; set; }
 		public string PlayerCash { get; set; }
@@ -22,7 +22,7 @@ namespace poker.UI
 
 		public Client Client { get; private set; }
 		public PokerPlayer Player { get; private set; }
-		
+
 		public PlayerInfoCard()
 		{
 			SetTemplate( "UI/PlayerInfoCard.html" );
@@ -32,13 +32,13 @@ namespace poker.UI
 		{
 			Client = client;
 			Player = player;
-			
+
 			InternalSetInfo();
 		}
 
 		private void InternalSetInfo()
 		{
-			AvatarImage = $"avatar:{Client.SteamId}";
+			AvatarImage = $"avatar:{Client.PlayerId}";
 			PlayerName = Client.Name;
 			PlayerCash = $"${Player.Money}";
 			Status = InfoStatus.None;
@@ -52,7 +52,7 @@ namespace poker.UI
 				Delete();
 				return;
 			}
-			
+
 			PlayerCash = $"${Player.Money}";
 			Status = InfoStatus.None;
 		}

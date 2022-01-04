@@ -2,7 +2,6 @@
 using Poker.Game;
 using Poker.Utils;
 using Sandbox;
-using Entity = Sandbox.Rcon.Entity;
 
 namespace Poker
 {
@@ -19,7 +18,7 @@ namespace Poker
 		private BaseViewModel ViewModelEntity { get; set; }
 		private Vector3 AimDir { get; set; }
 		private TraceResult AimTrace { get; set; }
-		
+
 		public override void Respawn()
 		{
 			SetModel( "models/citizen/citizen.vmdl" );
@@ -32,23 +31,23 @@ namespace Poker
 			EnableDrawing = true;
 			EnableHideInFirstPerson = true;
 			EnableShadowInFirstPerson = true;
-			
+
 			base.Respawn();
 		}
 
 		public override void ClientSpawn()
 		{
 			base.ClientSpawn();
-			
+
 			CreateViewModel();
 		}
 
-		private bool UpdateAimDir( Player controller, UserInput input )
+		private bool UpdateAimDir( Player controller )
 		{
-			if ( Input.CursorAim.LengthSquared < 0.1f )
+			if ( Input.Cursor.Direction.LengthSquared < 0.1f )
 				return false;
-			
-			AimDir = Input.CursorAim;
+
+			AimDir = Input.Cursor.Direction;
 			return true;
 		}
 
@@ -56,8 +55,8 @@ namespace Poker
 		{
 			Host.AssertClient();
 
-			ViewModelEntity = new BaseViewModel(); 
-			ViewModelEntity.Position = Position; 
+			ViewModelEntity = new BaseViewModel();
+			ViewModelEntity.Position = Position;
 			ViewModelEntity.Owner = Owner;
 			ViewModelEntity.EnableViewmodelRendering = true;
 			ViewModelEntity.SetModel( "models/viewmodelarms.vmdl" );
@@ -67,21 +66,18 @@ namespace Poker
 		{
 			base.Simulate( cl );
 
-			
+			UpdateAimDir( cl.Pawn as Player );
 
-			UpdateAimDir( cl.Pawn as Player, Input );
 			AimTrace = Trace.Ray( EyePos, EyePos + (AimDir * 120) )
 				//.Ignore( cl.Pawn )
 				.Radius( 0.25f )
 				.WorldOnly()
 				.Run();
-			
+
 			RunPickupSystem( cl );
-			
-			
-			
+
 			if ( IsClient )
-			{	
+			{
 				if ( AimTrace.Entity is MovableEntity )
 				{
 					MouseControl.Instance?.SetCursor( MouseControl.Cursor.Pointer );

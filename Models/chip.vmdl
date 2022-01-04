@@ -157,6 +157,16 @@
 							]
 						}
 					},
+					{
+						_class = "PhysicsShapeBox"
+						disabled = true
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.004619, -0.001941, 0.00536 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 1.945648, 1.952418, 0.185254 ]
+					},
 				]
 			},
 			{

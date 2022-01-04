@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using poker.UI;
+using Poker.UI;
 using Sandbox;
 using Sandbox.UI;
 

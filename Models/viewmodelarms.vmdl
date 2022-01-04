@@ -34,7 +34,7 @@
 						[
 							{
 								from = "citizen_skin.vmat"
-								to = "models/citizen/skin_old/citizen_skin.vmat"
+								to = "models/citizen_clothes/shoes/citizen_skin.whitey.vmat"
 							},
 							{
 								from = "cardback.vmat"
@@ -98,6 +98,7 @@
 						start_frame = -1
 						end_frame = -1
 						framerate = -1.0
+						take = 0
 						reverse = false
 					},
 				]

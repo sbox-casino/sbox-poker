@@ -1,7 +1,6 @@
 ﻿using System;
 using Poker.Entities;
 using Sandbox;
-using Entity = Sandbox.Rcon.Entity;
 
 namespace Poker
 {
@@ -14,7 +13,7 @@ namespace Poker
 		// Run this on client and server (i.e. in Simulate)
 		public void RunPickupSystem( Client client )
 		{
-			if ( Input.Down( InputButton.Attack1 ) && IsServer )
+			if ( Input.Pressed( InputButton.Attack1 ) && IsServer )
 			{
 				// Spawn an entity
 				SpawnEnt();
@@ -23,7 +22,7 @@ namespace Poker
 
 		private void SpawnEnt()
 		{
-			var chip = new ChipEntity();
+			var chip = new ChipStackEntity();
 			chip.Position = AimTrace.EndPos + (Vector3.Up * 2);
 			chip.Rotation = Rotation.LookAt( AimDir.WithZ( 0 ) );
 		}

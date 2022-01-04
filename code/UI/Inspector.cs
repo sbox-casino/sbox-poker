@@ -24,7 +24,7 @@ public class InspectorTarget : Panel
 
 		if ( root != null && root.Style != null )
 		{
-			var panel = InspectorUtils.GetHoveredPanel( root, root.MousePos ) ?? root;
+			var panel = InspectorUtils.GetHoveredPanel( root, root.MousePosition ) ?? root;
 
 			string classList;
 			if ( panel.Class.Any() )
@@ -102,7 +102,7 @@ static class InspectorUtils
 
 		var foundChild = p;
 		var root = p.FindRootPanel();
-		var rootPos = root.MousePos;
+		var rootPos = root.MousePosition;
 
 		foreach ( var child in p.Children )
 		{
