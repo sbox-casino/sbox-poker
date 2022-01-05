@@ -1,0 +1,222 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "bakedchip.vmat"
+								to = "materials/chipv2/chipv2.vmat"
+							},
+							{
+								from = ""
+								to = "materials/chipv2/plastic.vmat"
+							},
+							{
+								from = "chipnumber.vmat"
+								to = "materials/chipv2/plastic.vmat"
+							},
+							{
+								from = "chipuncolored.vmat"
+								to = "materials/chipv2/plastic.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+					{
+						_class = "MaterialGroup"
+						name = "Gold"
+						remaps = 
+						[
+							{
+								from = "materials/chip.vmat"
+								to = "materials/chip_gold.vmat"
+							},
+							{
+								from = "materials/chip_side.vmat"
+								to = "materials/chip_gold_side.vmat"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "LOD0"
+						filename = "Models/Chip.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Cylinder",
+								"Cylinder_005",
+								"Cylinder_004",
+								"Cylinder_001",
+								"Cylinder_002",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD1"
+						filename = "Models/Chip.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Cylinder",
+								"Cylinder_005",
+								"Cylinder_004",
+								"Cylinder_002",
+								"Cylinder_006",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD3"
+						filename = "Models/Chip.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Cylinder",
+								"Cylinder_005",
+								"Cylinder_006",
+								"Cylinder_002",
+								"Cylinder_001",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsHullFile"
+						name = "Chip"
+						parent_bone = ""
+						surface_prop = "chip"
+						collision_prop = "default"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						filename = "models/chip_col.fbx"
+						import_scale = 0.5
+						faceMergeAngle = 8.0
+						maxHullVertices = 16
+						import_mode = "SingleHull"
+						optimization_algorithm = "IFR"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Cylinder_003",
+								"Cylinder",
+							]
+						}
+					},
+					{
+						_class = "PhysicsShapeBox"
+						disabled = true
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.004619, -0.001941, 0.00536 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 1.945648, 1.952418, 0.185254 ]
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"LOD0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.5
+						meshes = 
+						[
+							"LOD1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 3.3
+						meshes = 
+						[
+							"LOD3",
+						]
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.05
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+	}
+}

@@ -1,0 +1,15 @@
+﻿<#@ template language="C#" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+
+{
+	_class = "MaterialGroup"
+	name = "<#= CardMaterial #>"
+	remaps = 
+	[
+		{
+			from = "materials/card_back.vmat"
+			to = "materials/card<#= CardMaterial #>.vmat"
+		},
+	]
+},
