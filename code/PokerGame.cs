@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace Poker
 {
-	[Library( "poker" )]
 	public partial class PokerGame : Sandbox.Game
 	{
 		public PokerHudEntity PokerHudEntity { get; set; }
@@ -38,8 +37,7 @@ namespace Poker
 
 			var playerCount = Entity.All.OfType<Player>().Count();
 
-			var spawnPoints = Entity.All
-				.OfType<SpawnPoint>().ToArray();
+			var spawnPoints = Entity.All.OfType<SpawnPoint>().ToArray();
 			var spawnpoint = spawnPoints[playerCount];
 
 			if ( spawnpoint == null )
