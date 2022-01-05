@@ -10,7 +10,7 @@ namespace Poker.Game
 	public class Deck
 	{
 		private List<Card> cardList;
-		private bool cardsShuffled;
+		private bool isShuffled;
 
 		public Deck()
 		{
@@ -41,7 +41,7 @@ namespace Poker.Game
 			var random = new Random();
 			cardList = cardList.OrderBy( a => random.Next( -1, 1 ) ).ToList();
 
-			cardsShuffled = true;
+			isShuffled = true;
 		}
 
 		/// <summary>

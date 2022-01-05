@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Poker.Game
 {
@@ -7,22 +8,17 @@ namespace Poker.Game
 	/// </summary>
 	public class HoleCards
 	{
-		public List<Card> CardList { get; private set; }
+		public Card[] Cards { get; private set; } = new Card[2];
 
-		public HoleCards()
+		public void DrawFromDeck( ref Deck deck )
 		{
-			CardList = new();
-		}
-
-		public void DrawFromDeck( ref Deck deck, int count )
-		{
-			CardList.AddRange( deck.Deal( count ) );
+			Cards = deck.Deal( 2 ).ToArray();
 		}
 
 		public Card Take( int index )
 		{
-			var card = CardList[index];
-			CardList.RemoveAt( index );
+			var card = Cards[index];
+			Cards[index] = null;
 			return card;
 		}
 	}
