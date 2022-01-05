@@ -4,7 +4,7 @@ using Sandbox;
 namespace Poker.Entities
 {
 	[Library( "ent_playing_card" )]
-	public partial class CardEntity : MovableEntity
+	public partial class CardEntity : ModelEntity
 	{
 		/// <summary>
 		/// The game-side representation of this card

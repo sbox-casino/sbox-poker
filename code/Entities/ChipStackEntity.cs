@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using Sandbox;
+﻿using Sandbox;
+using System.Collections.Generic;
 
 namespace Poker.Entities
 {
 	[Library( "ent_chip_stack" )]
-	public partial class ChipStackEntity : MovableEntity
+	public partial class ChipStackEntity : ModelEntity
 	{
 		private Vector3 ChipSize = new( 1.95f, 1.95f, 0.185f );
 		private List<ChipEntity> chips = new();

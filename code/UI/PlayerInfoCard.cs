@@ -1,5 +1,4 @@
-﻿using Poker;
-using Sandbox;
+﻿using Sandbox;
 using Sandbox.UI;
 
 namespace Poker.UI

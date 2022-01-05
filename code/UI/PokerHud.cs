@@ -12,7 +12,6 @@ namespace Poker
 			if ( IsClient )
 			{
 				Instance = this;
-				// RootPanel.AddChild<AgeWarning>();
 				SetupHud();
 			}
 		}

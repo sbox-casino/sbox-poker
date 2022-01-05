@@ -1,6 +1,4 @@
-﻿using Poker.Entities;
-using Poker.Game;
-using Sandbox;
+﻿using Sandbox;
 
 namespace Poker
 {
@@ -13,8 +11,6 @@ namespace Poker
 		 */
 
 		[Net] public decimal Money { get; set; } = 1000.00M; // haha s&bux
-
-		private BaseViewModel ViewModelEntity { get; set; }
 		private Vector3 AimDir { get; set; }
 		private TraceResult AimTrace { get; set; }
 
@@ -37,38 +33,24 @@ namespace Poker
 		public override void ClientSpawn()
 		{
 			base.ClientSpawn();
-
-			// CreateViewModel();
 		}
 
-		private bool UpdateAimDir( Player controller )
+		private void UpdateAimDir()
 		{
 			if ( Input.Cursor.Direction.LengthSquared < 0.1f )
-				return false;
+				return;
 
 			AimDir = Input.Cursor.Direction;
-			return true;
-		}
-
-		void CreateViewModel()
-		{
-			Host.AssertClient();
-
-			ViewModelEntity = new BaseViewModel();
-			ViewModelEntity.Position = Position;
-			ViewModelEntity.Owner = Owner;
-			ViewModelEntity.EnableViewmodelRendering = true;
-			ViewModelEntity.SetModel( "models/viewmodelarms.vmdl" );
 		}
 
 		public override void Simulate( Client cl )
 		{
 			base.Simulate( cl );
 
-			UpdateAimDir( cl.Pawn as Player );
+			UpdateAimDir();
 
 			AimTrace = Trace.Ray( EyePos, EyePos + (AimDir * 120) )
-				//.Ignore( cl.Pawn )
+				.Ignore( this )
 				.Radius( 0.25f )
 				.WorldOnly()
 				.Run();

@@ -1,7 +1,7 @@
 ﻿namespace Poker.Game
 {
     /// <summary>
-    ///     Available card values
+    /// Available card values
     /// </summary>
     public enum Value
     {
@@ -14,7 +14,7 @@
         Eight,
         Nine,
         Ten,
-        
+
         Ace,
         Jack,
         Queen,

@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Poker.UI;
-using Sandbox;
+﻿using Sandbox;
 using Sandbox.UI;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Poker.UI
 {
@@ -25,7 +24,7 @@ namespace Poker.UI
 					var newCard = AddChild<PlayerInfoCard>();
 					var player = client.Pawn as PokerPlayer;
 					newCard.SetInfo( client, player );
-					
+
 					playerInfoCards.Add( newCard );
 				}
 				else

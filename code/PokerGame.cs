@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using Poker.Entities;
-using Poker.Game;
+﻿using Poker.Game;
 using Sandbox;
+using System.Linq;
 
 namespace Poker
 {
@@ -13,11 +11,7 @@ namespace Poker
 		public PokerGame()
 		{
 			if ( IsServer )
-			{
 				PokerHudEntity = new PokerHudEntity();
-
-				CardTest();
-			}
 		}
 
 		[ServerCmd( "recreatehud" )]
@@ -26,7 +20,7 @@ namespace Poker
 			(PokerGame.Current as PokerGame).PokerHudEntity.Delete();
 			(PokerGame.Current as PokerGame).PokerHudEntity = new();
 		}
-		
+
 		public override void ClientJoined( Client client )
 		{
 			base.ClientJoined( client );
@@ -35,15 +29,15 @@ namespace Poker
 			client.Pawn = player;
 
 			player.Respawn();
-			
+
 			Event.Run( "playerInfoReload" );
 		}
-		
+
 		public override void MoveToSpawnpoint( Entity pawn )
 		{
 			if ( !IsServer )
 				return;
-			
+
 			var playerCount = Entity.All.OfType<Player>().Count();
 
 			var spawnPoints = Entity.All
@@ -57,7 +51,7 @@ namespace Poker
 
 			pawn.Transform = spawnpoint.Transform;
 			pawn.EyeRot = spawnpoint.Rotation;
-			pawn.EyeRot = Rotation.From( pawn.EyeRot.Angles().WithPitch( 40 ) );
+			pawn.EyeRot = Rotation.From( pawn.EyeRot.Angles().WithPitch( 45 ) );
 		}
 
 		[ServerCmd( "create_game" )]
@@ -65,25 +59,5 @@ namespace Poker
 		{
 			new PokerGameMachine().Run();
 		}
-
-		public void CardTest()
-		{
-			// Spawn every card as a test
-
-			for ( Suit suit = Suit.Diamonds; suit <= Suit.Clubs; ++suit )
-			{
-				for ( Value value = Value.Two; value <= Value.King; ++value )
-				{
-					var card = new CardEntity();
-					card.Position = (Vector3.Right * (int)value * 10) + (Vector3.Backward * (int)suit * 10) +
-					                (Vector3.Up * 100);
-					card.Rotation = Rotation.LookAt( Vector3.Up );
-
-					card.Card = new Card( suit, value );
-					card.Dirty();
-				}	
-			}
-		}
 	}
-
 }

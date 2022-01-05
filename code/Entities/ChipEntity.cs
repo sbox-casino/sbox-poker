@@ -1,10 +1,9 @@
-﻿using System;
-using Sandbox;
+﻿using Sandbox;
 
 namespace Poker.Entities
 {
 	[Library( "ent_chip" )]
-	public partial class ChipEntity : MovableEntity
+	public partial class ChipEntity : ModelEntity
 	{
 		private ChipValue value = ChipValue.Five;
 

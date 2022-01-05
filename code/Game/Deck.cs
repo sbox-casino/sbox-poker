@@ -5,7 +5,7 @@ using System.Linq;
 namespace Poker.Game
 {
 	/// <summary>
-	///     Card deck with shuffling and dealing operations
+	/// Card deck with shuffling and dealing operations
 	/// </summary>
 	public class Deck
 	{
@@ -26,7 +26,7 @@ namespace Poker.Game
 		}
 
 		/// <summary>
-		///     Checks if there are any cards left in the deck.
+		/// Checks if there are any cards left in the deck.
 		/// </summary>
 		public bool IsEmpty()
 		{
@@ -34,7 +34,7 @@ namespace Poker.Game
 		}
 
 		/// <summary>
-		///     Randomizes the order of the deck.
+		/// Randomizes the order of the deck.
 		/// </summary>
 		public void Shuffle()
 		{
@@ -45,7 +45,7 @@ namespace Poker.Game
 		}
 
 		/// <summary>
-		///     Removes X cards from the deck and returns them.
+		/// Removes X cards from the deck and returns them.
 		/// </summary>
 		public IEnumerable<Card> Deal( int count )
 		{
