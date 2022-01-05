@@ -1,11 +1,10 @@
 ﻿using Poker.Entities;
 using Poker.Game;
-using Poker.Utils;
 using Sandbox;
 
 namespace Poker
 {
-	partial class PokerPlayer : Player
+	public partial class PokerPlayer : Player
 	{
 		/*
 		 * We don't want poker players to be able to move around the map freely
@@ -39,7 +38,7 @@ namespace Poker
 		{
 			base.ClientSpawn();
 
-			CreateViewModel();
+			// CreateViewModel();
 		}
 
 		private bool UpdateAimDir( Player controller )
@@ -73,20 +72,6 @@ namespace Poker
 				.Radius( 0.25f )
 				.WorldOnly()
 				.Run();
-
-			RunPickupSystem( cl );
-
-			if ( IsClient )
-			{
-				if ( AimTrace.Entity is MovableEntity )
-				{
-					MouseControl.Instance?.SetCursor( MouseControl.Cursor.Pointer );
-				}
-				else
-				{
-					MouseControl.Instance?.SetCursor( MouseControl.Cursor.Default );
-				}
-			}
 		}
 
 		public override void FrameSimulate( Client cl )

@@ -1,5 +1,4 @@
 ﻿using Poker.UI;
-using Poker.Utils;
 using Sandbox.UI;
 
 namespace Poker
@@ -7,13 +6,12 @@ namespace Poker
 	public partial class PokerHudEntity : Sandbox.HudEntity<RootPanel>
 	{
 		public static PokerHudEntity Instance;
-		
+
 		public PokerHudEntity()
 		{
 			if ( IsClient )
 			{
 				Instance = this;
-				RootPanel.AddChild<Inspector>();
 				// RootPanel.AddChild<AgeWarning>();
 				SetupHud();
 			}
@@ -26,7 +24,6 @@ namespace Poker
 		{
 			RootPanel.AddChild<LocalPlayerHud>();
 			RootPanel.AddChild<ChatBox>();
-			RootPanel.AddChild<MouseControl>();
 			RootPanel.AddChild<PlayerInfo>();
 			RootPanel.AddChild<Scoreboard<PokerEntry>>();
 		}

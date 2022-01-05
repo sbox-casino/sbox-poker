@@ -1,5 +1,4 @@
 ﻿using Poker.Game;
-using Poker.Utils;
 using Sandbox;
 
 namespace Poker.Entities
@@ -11,7 +10,7 @@ namespace Poker.Entities
 		/// The game-side representation of this card
 		/// </summary>
 		public Card Card { get; set; }
-		
+
 		public override void Spawn()
 		{
 			base.Spawn();
@@ -24,7 +23,7 @@ namespace Poker.Entities
 			// Material groups match (Suit * ValueCount) + Value + 1
 			int materialIndex = ((int)Card.Suit * 13) + (int)Card.Value;
 			materialIndex++;
-			
+
 			SetMaterialGroup( materialIndex );
 		}
 	}
