@@ -7,7 +7,7 @@
 	{
 		public PokerGameMachine() { }
 
-		private readonly BasePlayer[] players = new BasePlayer[2];
+		private readonly PokerPlayer[] players = new PokerPlayer[2];
 		private Deck deck;
 
 		public enum Streets

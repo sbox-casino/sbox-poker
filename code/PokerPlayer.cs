@@ -1,4 +1,5 @@
-﻿using Sandbox;
+﻿using Poker.Game;
+using Sandbox;
 
 namespace Poker
 {
@@ -11,6 +12,8 @@ namespace Poker
 		 */
 
 		[Net] public decimal Money { get; set; } = 1000.00M; // haha s&bux
+		[Net] public HoleCards Hand { get; set; }
+
 		private Vector3 AimDir { get; set; }
 		private TraceResult AimTrace { get; set; }
 
