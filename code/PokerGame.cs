@@ -29,8 +29,6 @@ namespace Poker
 			client.Pawn = player;
 
 			player.Respawn();
-
-			Event.Run( "playerInfoReload" );
 		}
 
 		public override void MoveToSpawnpoint( Entity pawn )
