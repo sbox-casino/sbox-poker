@@ -1,5 +1,5 @@
 
-@BaseClass = BaseProperties_poker
+@BaseClass = BaseProperties_Poker
 [
 	parentname(target_destination) [ group="Hierarchy" ] : "Parent" : : "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
 	parentAttachmentName(parentAttachment) [ group="Hierarchy" ] : "Parent Model Bone/Attachment Name" : : "The name of the bone or attachment to attach to on the entity's parent in the movement hierarchy. Use !bonemerge to use bone-merge style attachment."
@@ -14,16 +14,9 @@
 ]
 
 //
-// Poker.PokerGame
-//
-@PointClass base(BaseProperties_poker) = poker : ""
-[
-]
-
-//
 // Poker.Entities.CardEntity
 //
-@PointClass base(BaseProperties_poker) = ent_playing_card : ""
+@PointClass base(BaseProperties_Poker) = ent_playing_card : ""
 [
 	enable_shadows(boolean) { group = "Rendering" } : "Shadow Casting" : 1 : "Whether this entity should cast shadows or not"
 
@@ -33,7 +26,7 @@
 //
 // Poker.Entities.ChipEntity
 //
-@PointClass base(BaseProperties_poker) = ent_chip : ""
+@PointClass base(BaseProperties_Poker) = ent_chip : ""
 [
 	enable_shadows(boolean) { group = "Rendering" } : "Shadow Casting" : 1 : "Whether this entity should cast shadows or not"
 
@@ -43,7 +36,7 @@
 //
 // Poker.Entities.ChipStackEntity
 //
-@PointClass base(BaseProperties_poker) = ent_chip_stack : ""
+@PointClass base(BaseProperties_Poker) = ent_chip_stack : ""
 [
 	enable_shadows(boolean) { group = "Rendering" } : "Shadow Casting" : 1 : "Whether this entity should cast shadows or not"
 
