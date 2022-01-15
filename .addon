@@ -1,21 +1,13 @@
 {
-		"name": "poker",
-		"sharedassets": "*.*",
-		
-		"depends": 
-		[
-			"base",
-			"citizen",
-			"rust"
-		],
-
-		"gamemodes":
-		[
-			{
-				"name": "poker",
-				"title": "Poker",
-				"description": "Authentic Texas hold 'em",
-				"icon": "Textures/UI/Thumb.png"
-			}
-		]
+  "SharedAssets": null,
+  "Title": "Texas Hold \u0027em",
+  "Type": "game",
+  "Org": "casino",
+  "Ident": "casino",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "HasCode": true,
+  "CodePath": "code",
+  "RootNamespace": "Sandbox"
 }
